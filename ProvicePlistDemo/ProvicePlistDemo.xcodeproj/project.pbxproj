@@ -1,0 +1,313 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F45409E41CF431BA00F190C0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F45409E31CF431BA00F190C0 /* main.m */; };
+		F45409E71CF431BA00F190C0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F45409E61CF431BA00F190C0 /* AppDelegate.m */; };
+		F45409EA1CF431BA00F190C0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F45409E91CF431BA00F190C0 /* ViewController.m */; };
+		F45409ED1CF431BA00F190C0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F45409EB1CF431BA00F190C0 /* Main.storyboard */; };
+		F45409EF1CF431BA00F190C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F45409EE1CF431BA00F190C0 /* Assets.xcassets */; };
+		F45409F21CF431BA00F190C0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F45409F01CF431BA00F190C0 /* LaunchScreen.storyboard */; };
+		F45409FA1CF4522400F190C0 /* province.plist in Resources */ = {isa = PBXBuildFile; fileRef = F45409F91CF4522400F190C0 /* province.plist */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		F45409DF1CF431BA00F190C0 /* ProvicePlistDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProvicePlistDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F45409E31CF431BA00F190C0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F45409E51CF431BA00F190C0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		F45409E61CF431BA00F190C0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		F45409E81CF431BA00F190C0 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		F45409E91CF431BA00F190C0 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		F45409EC1CF431BA00F190C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F45409EE1CF431BA00F190C0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F45409F11CF431BA00F190C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F45409F31CF431BA00F190C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F45409F91CF4522400F190C0 /* province.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = province.plist; path = ../../../../Desktop/province.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F45409DC1CF431BA00F190C0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F45409D61CF431BA00F190C0 = {
+			isa = PBXGroup;
+			children = (
+				F45409E11CF431BA00F190C0 /* ProvicePlistDemo */,
+				F45409E01CF431BA00F190C0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F45409E01CF431BA00F190C0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F45409DF1CF431BA00F190C0 /* ProvicePlistDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F45409E11CF431BA00F190C0 /* ProvicePlistDemo */ = {
+			isa = PBXGroup;
+			children = (
+				F45409F91CF4522400F190C0 /* province.plist */,
+				F45409E51CF431BA00F190C0 /* AppDelegate.h */,
+				F45409E61CF431BA00F190C0 /* AppDelegate.m */,
+				F45409E81CF431BA00F190C0 /* ViewController.h */,
+				F45409E91CF431BA00F190C0 /* ViewController.m */,
+				F45409EB1CF431BA00F190C0 /* Main.storyboard */,
+				F45409EE1CF431BA00F190C0 /* Assets.xcassets */,
+				F45409F01CF431BA00F190C0 /* LaunchScreen.storyboard */,
+				F45409F31CF431BA00F190C0 /* Info.plist */,
+				F45409E21CF431BA00F190C0 /* Supporting Files */,
+			);
+			path = ProvicePlistDemo;
+			sourceTree = "<group>";
+		};
+		F45409E21CF431BA00F190C0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F45409E31CF431BA00F190C0 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F45409DE1CF431BA00F190C0 /* ProvicePlistDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F45409F61CF431BA00F190C0 /* Build configuration list for PBXNativeTarget "ProvicePlistDemo" */;
+			buildPhases = (
+				F45409DB1CF431BA00F190C0 /* Sources */,
+				F45409DC1CF431BA00F190C0 /* Frameworks */,
+				F45409DD1CF431BA00F190C0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ProvicePlistDemo;
+			productName = ProvicePlistDemo;
+			productReference = F45409DF1CF431BA00F190C0 /* ProvicePlistDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F45409D71CF431BA00F190C0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = ZeluLi;
+				TargetAttributes = {
+					F45409DE1CF431BA00F190C0 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+				};
+			};
+			buildConfigurationList = F45409DA1CF431BA00F190C0 /* Build configuration list for PBXProject "ProvicePlistDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F45409D61CF431BA00F190C0;
+			productRefGroup = F45409E01CF431BA00F190C0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F45409DE1CF431BA00F190C0 /* ProvicePlistDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F45409DD1CF431BA00F190C0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F45409F21CF431BA00F190C0 /* LaunchScreen.storyboard in Resources */,
+				F45409EF1CF431BA00F190C0 /* Assets.xcassets in Resources */,
+				F45409FA1CF4522400F190C0 /* province.plist in Resources */,
+				F45409ED1CF431BA00F190C0 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F45409DB1CF431BA00F190C0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F45409EA1CF431BA00F190C0 /* ViewController.m in Sources */,
+				F45409E71CF431BA00F190C0 /* AppDelegate.m in Sources */,
+				F45409E41CF431BA00F190C0 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F45409EB1CF431BA00F190C0 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F45409EC1CF431BA00F190C0 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F45409F01CF431BA00F190C0 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F45409F11CF431BA00F190C0 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F45409F41CF431BA00F190C0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		F45409F51CF431BA00F190C0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F45409F71CF431BA00F190C0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = ProvicePlistDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ZeluLi.ProvicePlistDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		F45409F81CF431BA00F190C0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = ProvicePlistDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ZeluLi.ProvicePlistDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F45409DA1CF431BA00F190C0 /* Build configuration list for PBXProject "ProvicePlistDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F45409F41CF431BA00F190C0 /* Debug */,
+				F45409F51CF431BA00F190C0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F45409F61CF431BA00F190C0 /* Build configuration list for PBXNativeTarget "ProvicePlistDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F45409F71CF431BA00F190C0 /* Debug */,
+				F45409F81CF431BA00F190C0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F45409D71CF431BA00F190C0 /* Project object */;
+}

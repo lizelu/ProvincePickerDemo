@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Rq-aG-z30">
+                                <rect key="frame" x="20" y="20" width="195" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="vWZ-bo-kV8"/>
+                                    <constraint firstAttribute="width" constant="195" id="xcl-2N-QqG"/>
+                                </constraints>
+                                <state key="normal" title="网络请求数据并生成Plist文件"/>
+                                <connections>
+                                    <action selector="tapPlistButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6j3-RH-ATk"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="请选择支行所在省市" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="JzH-Z5-ERi">
+                                <rect key="frame" x="20" y="98" width="560" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="TcQ-gO-SE1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o3m-4j-TCJ">
+                                <rect key="frame" x="7" y="91" width="573" height="46"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="pDo-Wf-PHE"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="tapSelectButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TOJ-Am-bKH"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RGQ-ew-ZsK">
+                                <rect key="frame" x="14" y="182" width="162" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="JzH-Z5-ERi" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Ise-Vp-pxh"/>
+                            <constraint firstItem="JzH-Z5-ERi" firstAttribute="top" secondItem="6Rq-aG-z30" secondAttribute="bottom" constant="48" id="PBE-Ge-jNw"/>
+                            <constraint firstAttribute="trailing" secondItem="o3m-4j-TCJ" secondAttribute="trailing" constant="20" id="PTK-34-F9o"/>
+                            <constraint firstItem="6Rq-aG-z30" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="a2i-tX-8ue"/>
+                            <constraint firstItem="JzH-Z5-ERi" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="aNR-PA-Vhx"/>
+                            <constraint firstItem="o3m-4j-TCJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="7" id="efk-bI-xy0"/>
+                            <constraint firstItem="6Rq-aG-z30" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="fC3-3D-9Gc"/>
+                            <constraint firstItem="o3m-4j-TCJ" firstAttribute="top" secondItem="6Rq-aG-z30" secondAttribute="bottom" constant="41" id="iCV-Bc-KRq"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="provinceLabel" destination="JzH-Z5-ERi" id="AEg-fq-5ML"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="440" y="429"/>
+        </scene>
+    </scenes>
+</document>
