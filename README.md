@@ -1,2 +1,2 @@
 # ProvincePickerDemo
-省市Piker
+省市Picker
