@@ -31,27 +31,34 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    _provincePicker = [[ProvincePickerView alloc] init];
-    [self.view addSubview:_provincePicker];
+    _provincePicker = [[ProvincePickerView alloc] init];        //初始化ProvincePicker
+    [self.view addSubview:_provincePicker];                     //添加到view上
     
-    
+    //设置回调数据的Block
     __weak typeof(self) weak_self = self;
     [_provincePicker setSelectProvinceInfoBlock:^(ProvinceModel *currentProvinceModel) {
-        
         if (currentProvinceModel) {
-            weak_self.currentSelectProvinceModel = currentProvinceModel;
-            
-            weak_self.provinceLabel.text = [NSString stringWithFormat:@"%@ %@", currentProvinceModel.provinceName, currentProvinceModel.cityName];
-            
-            weak_self.currentProvinceNameLabel.text = currentProvinceModel.provinceName;
-            weak_self.currentProvinceCodeLabel.text = currentProvinceModel.provinceCode;
-            weak_self.currentCityNameLabel.text = currentProvinceModel.cityName;
-            weak_self.currentCityCodeLabel.text = currentProvinceModel.cityCode;
-            
+            [weak_self setLabelTextWithProvinceModel:currentProvinceModel];
         }
     }];
-
     
+}
+
+/**
+ *  处理回调过来的选择数据
+ *
+ *  @param currentProvinceModel 当前选择的数据Model
+ */
+- (void)setLabelTextWithProvinceModel: (ProvinceModel *) currentProvinceModel {
+    
+    self.currentSelectProvinceModel = currentProvinceModel;
+    self.provinceLabel.text = [NSString stringWithFormat:@"%@ %@", currentProvinceModel.provinceName, currentProvinceModel.cityName];
+    
+    self.currentProvinceNameLabel.text = currentProvinceModel.provinceName;
+    self.currentProvinceCodeLabel.text = currentProvinceModel.provinceCode;
+    self.currentCityNameLabel.text = currentProvinceModel.cityName;
+    self.currentCityCodeLabel.text = currentProvinceModel.cityCode;
+
 }
 
 /**

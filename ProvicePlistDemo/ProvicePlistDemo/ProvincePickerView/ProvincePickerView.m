@@ -14,6 +14,7 @@
 #define PICKER_VIEW_ROW_HEIGHT 30.0f
 #define PICKER_VIEW_COMPONENT_COUNT 2
 
+
 @interface ProvincePickerView()<UIPickerViewDelegate, UIPickerViewDataSource>
 
 @property (strong, nonatomic) UITextField *inputTextField;      //用来触发pickerView的inputTextField
