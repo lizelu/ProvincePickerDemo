@@ -27,6 +27,8 @@
 
 @implementation ProvincePickerView
 
+
+#pragma mark -- life cycle
 - (instancetype)init
 {
     self = [super init];
@@ -36,6 +38,8 @@
     }
     return self;
 }
+
+
 
 
 #pragma mark -- setting and add subView
@@ -89,6 +93,9 @@
     NSString *filePath = [[NSBundle mainBundle] pathForResource:@"province" ofType:@"plist"];
     _provinceArray = [[NSMutableArray alloc] initWithContentsOfFile:filePath];
 }
+
+
+
 
 
 
@@ -171,6 +178,10 @@
     
     return 0;
 }
+
+
+
+
 
 
 #pragma mark -- UIPickerViewDelegate

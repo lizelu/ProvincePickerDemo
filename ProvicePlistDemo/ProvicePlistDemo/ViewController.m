@@ -34,6 +34,7 @@
     _provincePicker = [[ProvincePickerView alloc] init];
     [self.view addSubview:_provincePicker];
     
+    
     __weak typeof(self) weak_self = self;
     [_provincePicker setSelectProvinceInfoBlock:^(ProvinceModel *currentProvinceModel) {
         
@@ -53,35 +54,41 @@
     
 }
 
+/**
+ *  从服务器获取省市的Json编码，并存储到PList文件中
+ *
+ *  @param sender
+ */
 - (IBAction)tapPlistButton:(id)sender {
     
     NSString *hostString = @"http://127.0.0.1/read_excel.php";
+    
     NSURL *plistURL = [[NSURL alloc] initWithString: hostString];
     
     NSURLSession *session = [NSURLSession sharedSession];
+    
     NSURLSessionDataTask *dataTask = [session dataTaskWithURL:plistURL completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
-        //NSLog(@"%@\n\n", data);
+       
         NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:nil];
-        //NSLog(@"%@\n\n", dic);
         
         NSFileManager *fileManager = [NSFileManager defaultManager];
         NSURL *documentPath = [fileManager URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask][0] ;
         NSURL *filePath = [documentPath URLByAppendingPathComponent:@"province.plist"];
         
         [dic writeToURL:filePath atomically:YES];
-        NSLog(@"%@", filePath);
+        NSLog(@"文件存储路径%@", filePath);
         
+        //从沙盒中读取文件
         NSMutableArray *provinceData = [[NSMutableArray alloc] initWithContentsOfURL:filePath];
         NSLog(@"%@", provinceData);
         
-        
     }];
+    
     [dataTask resume];
     
 }
 
 - (IBAction)tapSelectButton:(id)sender {
-    
     [self.provincePicker showPickerView];
 }
 
