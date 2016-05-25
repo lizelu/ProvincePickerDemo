@@ -11,18 +11,16 @@
 #define PROVINCE_CITYS @"citys"
 #define PROVINCE_AND_CITYS_NAME @"name"
 #define PROVINCE_AND_CITYS_CODE @"code"
+#define PICKER_VIEW_ROW_HEIGHT 30.0f
+#define PICKER_VIEW_COMPONENT_COUNT 2
 
 @interface ProvincePickerView()<UIPickerViewDelegate, UIPickerViewDataSource>
-@property (strong, nonatomic) UITextField *inputTextField;
-@property (strong, nonatomic) UIPickerView *provincePickerView;
 
-@property (strong, nonatomic) NSMutableArray *provinceArray;
-
-@property (assign, nonatomic) NSUInteger currentFirstRow;
-@property (assign, nonatomic) NSUInteger currentSecondRow;
-
-@property (strong, nonatomic) NSNumber * currentProvinceCode;
-@property (strong, nonatomic) NSNumber * currentCityCode;
+@property (strong, nonatomic) UITextField *inputTextField;      //用来触发pickerView的inputTextField
+@property (strong, nonatomic) UIPickerView *provincePickerView; //PickerView
+@property (strong, nonatomic) NSMutableArray *provinceArray;    //存储从plist文件中读取的省市信息
+@property (assign, nonatomic) NSUInteger currentFirstRow;       //当前选中的第一列的行数
+@property (assign, nonatomic) NSUInteger currentSecondRow;      //当前选中的第二列的行数
 
 @property (strong, nonatomic) SelectProvinceInfoBlock block;
 @end
@@ -33,7 +31,6 @@
 {
     self = [super init];
     if (self) {
-        
         [self loadAllProvinceData];
         [self addPickerViewToCurrentView];
     }
@@ -43,10 +40,18 @@
 
 #pragma mark -- setting and add subView
 
+/**
+ *  设置Block, 用来将用户选则的数据回调给使用者
+ *
+ *  @param block 回调数据的Block
+ */
 - (void) setSelectProvinceInfoBlock: (SelectProvinceInfoBlock) block{
     self.block = block;
 }
 
+/**
+ *  实例化PickerView并添加到inputView上
+ */
 - (void)addPickerViewToCurrentView {
     _inputTextField = [[UITextField alloc] init];
     [self addSubview:_inputTextField];
@@ -59,26 +64,28 @@
     [self addToolBarItem];
 }
 
+
+/**
+ *  往inputAccessoryView上添加ToolBar
+ */
 - (void) addToolBarItem {
     //TextView的键盘定制回收按钮
     UIToolbar * toolBar = [[UIToolbar alloc]initWithFrame:CGRectMake(0, 0, 1000, 44)];
-    UIBarButtonItem *item0 = [[UIBarButtonItem alloc] initWithTitle:@"取消" style:UIBarButtonItemStyleDone target:self action:@selector(cancelSelect)];
+    
+    UIBarButtonItem *item0 = [[UIBarButtonItem alloc] initWithTitle:@"取消" style:UIBarButtonItemStyleDone target:self action:@selector(hiddenPickerView)];
     
     UIBarButtonItem * item1 = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
     
     UIBarButtonItem *item2 = [[UIBarButtonItem alloc] initWithTitle:@"完成" style:UIBarButtonItemStyleDone target:self action:@selector(tapSelectOkButton)];
     
     toolBar.items = @[item0,item1,item2];
-    
     _inputTextField.inputAccessoryView = toolBar;
 }
 
-
+/**
+ *  从plist文件中加载省市信息
+ */
 - (void)loadAllProvinceData {
-    
-    _currentProvinceCode = 0;
-    _currentCityCode = 0;
-    
     NSString *filePath = [[NSBundle mainBundle] pathForResource:@"province" ofType:@"plist"];
     _provinceArray = [[NSMutableArray alloc] initWithContentsOfFile:filePath];
 }
@@ -86,21 +93,28 @@
 
 
 #pragma mark - all event
-
+/**
+ *  显示PickerView
+ */
 - (void) showPickerView {
-    _currentFirstRow = 0;
-    _currentSecondRow = 0;
-    
     [_inputTextField becomeFirstResponder];
-    [_provincePickerView reloadAllComponents];
+    [_provincePickerView selectRow:_currentFirstRow inComponent:0 animated:NO];
+    [_provincePickerView selectRow:_currentSecondRow inComponent:1 animated:NO];
+    
 }
 
-- (void) cancelSelect {
+/**
+ *  隐藏PickerView
+ */
+- (void) hiddenPickerView {
     [self.superview endEditing:YES];
 }
 
+/**
+ *  点击完成按钮
+ */
 - (void) tapSelectOkButton {
-    [self.superview endEditing:YES];
+    [self hiddenPickerView];
     
     ProvinceModel *provinceModel = [[ProvinceModel alloc] init];
     
@@ -133,10 +147,18 @@
  *  @return 列数
  */
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView{
-    return 2;
+    return PICKER_VIEW_COMPONENT_COUNT;
 }
 
-// returns the # of rows in each component..
+
+/**
+ *  返回每列有多上行
+ *
+ *  @param pickerView   当前PickerView
+ *  @param component    列数
+ *
+ *  @return 当前列数的行数
+ */
 - (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component{
     if (component == 0 && _provinceArray != nil) {
         return _provinceArray.count;
@@ -153,10 +175,29 @@
 
 #pragma mark -- UIPickerViewDelegate
 
+/**
+ *  行高
+ *
+ *  @param pickerView
+ *  @param component  列数
+ *
+ *  @return 返回当前列数的行高
+ */
 - (CGFloat)pickerView:(UIPickerView *)pickerView rowHeightForComponent:(NSInteger)component {
-    return 30;
+    return PICKER_VIEW_ROW_HEIGHT;
 }
 
+
+/**
+ *  自定义PickerView上的显示View
+ *
+ *  @param pickerView 当前PickerView
+ *  @param row        行数
+ *  @param component  列数
+ *  @param view       当前的显示View
+ *
+ *  @return 要替换的View
+ */
 -(UIView *)pickerView:(UIPickerView *)pickerView viewForRow:(NSInteger)row forComponent:(NSInteger)component reusingView:(UIView *)view {
     UILabel *label = [[UILabel alloc] initWithFrame:view.frame];
     
@@ -169,6 +210,15 @@
     return label;
 }
 
+/**
+ *  为每行每列设置title
+ *
+ *  @param pickerView
+ *  @param row        行数
+ *  @param component  列数
+ *
+ *  @return 该行该列的title
+ */
 -(NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component {
     
     if (component == 0 && row < _provinceArray.count) {
@@ -185,6 +235,13 @@
     return @"";
 }
 
+/**
+ *  选中后的回调
+ *
+ *  @param pickerView
+ *  @param row        当前选中的行
+ *  @param component  当前选中的列
+ */
 -(void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
     if (component == 0) {
         _currentFirstRow = row;
