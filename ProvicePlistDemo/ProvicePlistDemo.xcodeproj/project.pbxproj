@@ -13,7 +13,7 @@
 		F45409ED1CF431BA00F190C0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F45409EB1CF431BA00F190C0 /* Main.storyboard */; };
 		F45409EF1CF431BA00F190C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F45409EE1CF431BA00F190C0 /* Assets.xcassets */; };
 		F45409F21CF431BA00F190C0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F45409F01CF431BA00F190C0 /* LaunchScreen.storyboard */; };
-		F45409FA1CF4522400F190C0 /* province.plist in Resources */ = {isa = PBXBuildFile; fileRef = F45409F91CF4522400F190C0 /* province.plist */; };
+		F45409FE1CF5361B00F190C0 /* province.plist in Resources */ = {isa = PBXBuildFile; fileRef = F45409FD1CF5361B00F190C0 /* province.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,7 +27,7 @@
 		F45409EE1CF431BA00F190C0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F45409F11CF431BA00F190C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F45409F31CF431BA00F190C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F45409F91CF4522400F190C0 /* province.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = province.plist; path = ../../../../Desktop/province.plist; sourceTree = "<group>"; };
+		F45409FD1CF5361B00F190C0 /* province.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = province.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,7 +60,7 @@
 		F45409E11CF431BA00F190C0 /* ProvicePlistDemo */ = {
 			isa = PBXGroup;
 			children = (
-				F45409F91CF4522400F190C0 /* province.plist */,
+				F45409FD1CF5361B00F190C0 /* province.plist */,
 				F45409E51CF431BA00F190C0 /* AppDelegate.h */,
 				F45409E61CF431BA00F190C0 /* AppDelegate.m */,
 				F45409E81CF431BA00F190C0 /* ViewController.h */,
@@ -141,7 +141,7 @@
 			files = (
 				F45409F21CF431BA00F190C0 /* LaunchScreen.storyboard in Resources */,
 				F45409EF1CF431BA00F190C0 /* Assets.xcassets in Resources */,
-				F45409FA1CF4522400F190C0 /* province.plist in Resources */,
+				F45409FE1CF5361B00F190C0 /* province.plist in Resources */,
 				F45409ED1CF431BA00F190C0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

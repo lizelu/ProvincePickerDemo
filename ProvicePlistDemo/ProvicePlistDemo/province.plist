@@ -7,21 +7,6 @@
 		<array>
 			<dict>
 				<key>code</key>
-				<string>000000</string>
-				<key>name</key>
-				<string>其他</string>
-			</dict>
-		</array>
-		<key>code</key>
-		<string>000000</string>
-		<key>name</key>
-		<string>其他</string>
-	</dict>
-	<dict>
-		<key>citys</key>
-		<array>
-			<dict>
-				<key>code</key>
 				<integer>110100</integer>
 				<key>name</key>
 				<string>市辖区</string>
