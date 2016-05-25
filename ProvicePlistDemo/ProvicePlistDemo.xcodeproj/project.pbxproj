@@ -14,6 +14,8 @@
 		F45409EF1CF431BA00F190C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F45409EE1CF431BA00F190C0 /* Assets.xcassets */; };
 		F45409F21CF431BA00F190C0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F45409F01CF431BA00F190C0 /* LaunchScreen.storyboard */; };
 		F45409FE1CF5361B00F190C0 /* province.plist in Resources */ = {isa = PBXBuildFile; fileRef = F45409FD1CF5361B00F190C0 /* province.plist */; };
+		F4540A051CF54D4A00F190C0 /* ProvincePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = F4540A041CF54D4A00F190C0 /* ProvincePickerView.m */; };
+		F4540A081CF5505500F190C0 /* ProvinceModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F4540A071CF5505500F190C0 /* ProvinceModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,10 @@
 		F45409F11CF431BA00F190C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F45409F31CF431BA00F190C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F45409FD1CF5361B00F190C0 /* province.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = province.plist; sourceTree = "<group>"; };
+		F4540A031CF54D4A00F190C0 /* ProvincePickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProvincePickerView.h; sourceTree = "<group>"; };
+		F4540A041CF54D4A00F190C0 /* ProvincePickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProvincePickerView.m; sourceTree = "<group>"; };
+		F4540A061CF5505500F190C0 /* ProvinceModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProvinceModel.h; sourceTree = "<group>"; };
+		F4540A071CF5505500F190C0 /* ProvinceModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProvinceModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +66,8 @@
 		F45409E11CF431BA00F190C0 /* ProvicePlistDemo */ = {
 			isa = PBXGroup;
 			children = (
+				F4540A091CF5505F00F190C0 /* ProvinceModel */,
+				F45409FF1CF54CC700F190C0 /* ProvincePickerView */,
 				F45409FD1CF5361B00F190C0 /* province.plist */,
 				F45409E51CF431BA00F190C0 /* AppDelegate.h */,
 				F45409E61CF431BA00F190C0 /* AppDelegate.m */,
@@ -80,6 +88,24 @@
 				F45409E31CF431BA00F190C0 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F45409FF1CF54CC700F190C0 /* ProvincePickerView */ = {
+			isa = PBXGroup;
+			children = (
+				F4540A031CF54D4A00F190C0 /* ProvincePickerView.h */,
+				F4540A041CF54D4A00F190C0 /* ProvincePickerView.m */,
+			);
+			name = ProvincePickerView;
+			sourceTree = "<group>";
+		};
+		F4540A091CF5505F00F190C0 /* ProvinceModel */ = {
+			isa = PBXGroup;
+			children = (
+				F4540A061CF5505500F190C0 /* ProvinceModel.h */,
+				F4540A071CF5505500F190C0 /* ProvinceModel.m */,
+			);
+			name = ProvinceModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -154,7 +180,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				F45409EA1CF431BA00F190C0 /* ViewController.m in Sources */,
+				F4540A081CF5505500F190C0 /* ProvinceModel.m in Sources */,
 				F45409E71CF431BA00F190C0 /* AppDelegate.m in Sources */,
+				F4540A051CF54D4A00F190C0 /* ProvincePickerView.m in Sources */,
 				F45409E41CF431BA00F190C0 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -306,6 +334,7 @@
 				F45409F81CF431BA00F190C0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
