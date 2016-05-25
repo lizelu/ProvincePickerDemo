@@ -257,7 +257,6 @@
 -(void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
     if (component == 0) {
         _currentFirstRow = row;
-        _currentSecondRow = 0;
     }
     
     if (component == 1) {
