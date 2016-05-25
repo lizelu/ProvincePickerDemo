@@ -68,7 +68,7 @@
  */
 - (IBAction)tapPlistButton:(id)sender {
     
-    NSString *hostString = @"http://127.0.0.1/read_excel.php";
+    NSString *hostString = @"http://127.0.0.1/PHPForProvince/read_excel.php";
     
     NSURL *plistURL = [[NSURL alloc] initWithString: hostString];
     
