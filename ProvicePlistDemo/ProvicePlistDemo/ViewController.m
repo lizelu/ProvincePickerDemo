@@ -74,9 +74,14 @@
     
     NSURLSession *session = [NSURLSession sharedSession];
     
-    NSURLSessionDataTask *dataTask = [session dataTaskWithURL:plistURL completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+    NSURLSessionDataTask *dataTask =
+    [session dataTaskWithURL:plistURL
+           completionHandler:^(NSData * _Nullable data,
+                               NSURLResponse * _Nullable response,
+                               NSError * _Nullable error) {
        
-        NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:nil];
+        NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:data
+                                                            options:NSJSONReadingAllowFragments error:nil];
         
         NSFileManager *fileManager = [NSFileManager defaultManager];
         NSURL *documentPath = [fileManager URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask][0] ;

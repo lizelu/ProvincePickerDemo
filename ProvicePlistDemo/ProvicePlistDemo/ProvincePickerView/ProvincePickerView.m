@@ -210,9 +210,10 @@
  *
  *  @return 要替换的View
  */
--(UIView *)pickerView:(UIPickerView *)pickerView viewForRow:(NSInteger)row forComponent:(NSInteger)component reusingView:(UIView *)view {
-    UILabel *label = [[UILabel alloc] initWithFrame:view.frame];
+-(UIView *)pickerView:(UIPickerView *)pickerView viewForRow:(NSInteger)row
+         forComponent:(NSInteger)component reusingView:(UIView *)view {
     
+    UILabel *label = [[UILabel alloc] initWithFrame:view.frame];
     label.minimumScaleFactor = 0.5;
     label.adjustsFontSizeToFitWidth = YES;
     [label setTextAlignment:NSTextAlignmentCenter];
@@ -231,7 +232,8 @@
  *
  *  @return 该行该列的title
  */
--(NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component {
+-(NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row
+           forComponent:(NSInteger)component {
     
     if (component == 0 && row < _provinceArray.count) {
         return _provinceArray[row][PROVINCE_AND_CITYS_NAME];
