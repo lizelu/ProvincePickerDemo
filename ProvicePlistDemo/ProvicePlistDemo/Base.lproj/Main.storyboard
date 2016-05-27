@@ -53,7 +53,7 @@
                                     <constraint firstAttribute="height" constant="21" id="jGT-JN-T1x"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="code" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cK1-wv-w3g">
@@ -62,7 +62,7 @@
                                     <constraint firstAttribute="height" constant="21" id="Jf6-Vc-6Yx"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="所在市" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ox4-2g-VJo">
@@ -71,7 +71,7 @@
                                     <constraint firstAttribute="height" constant="21" id="I3H-Z8-aUV"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="所在省" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aBT-Gi-ZYw">
@@ -80,14 +80,26 @@
                                     <constraint firstAttribute="height" constant="21" id="lrZ-Co-akR"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pZW-5x-CZv">
+                                <rect key="frame" x="20" y="53" width="242" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="PaG-Fq-j34"/>
+                                    <constraint firstAttribute="width" constant="242" id="llN-Ht-OHO"/>
+                                </constraints>
+                                <state key="normal" title="网络请求数据并生成SearchPlist文件"/>
+                                <connections>
+                                    <action selector="tapRequestSearchButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ydd-H0-jFW"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="cK1-wv-w3g" firstAttribute="width" secondItem="Ox4-2g-VJo" secondAttribute="width" id="0yq-yr-byq"/>
                             <constraint firstAttribute="trailingMargin" secondItem="cK1-wv-w3g" secondAttribute="trailing" constant="5" id="6Xx-7P-EoL"/>
+                            <constraint firstItem="pZW-5x-CZv" firstAttribute="top" secondItem="6Rq-aG-z30" secondAttribute="bottom" constant="3" id="ABf-UM-weg"/>
                             <constraint firstItem="FGF-iw-yWd" firstAttribute="width" secondItem="aBT-Gi-ZYw" secondAttribute="width" id="Dzk-bb-wJP"/>
                             <constraint firstItem="6Rq-aG-z30" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Hf1-3D-uRo"/>
                             <constraint firstItem="JzH-Z5-ERi" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Ise-Vp-pxh"/>
@@ -104,6 +116,7 @@
                             <constraint firstItem="6Rq-aG-z30" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="fC3-3D-9Gc"/>
                             <constraint firstItem="aBT-Gi-ZYw" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="5" id="g2f-7A-aAu"/>
                             <constraint firstItem="o3m-4j-TCJ" firstAttribute="top" secondItem="6Rq-aG-z30" secondAttribute="bottom" constant="41" id="iCV-Bc-KRq"/>
+                            <constraint firstItem="pZW-5x-CZv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="rgR-Lw-I0c"/>
                             <constraint firstItem="Ox4-2g-VJo" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="5" id="shV-7p-dR9"/>
                             <constraint firstItem="FGF-iw-yWd" firstAttribute="leading" secondItem="aBT-Gi-ZYw" secondAttribute="trailing" constant="5" id="zPS-OX-ecf"/>
                         </constraints>
@@ -118,7 +131,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="440" y="429"/>
+            <point key="canvasLocation" x="187" y="372"/>
         </scene>
     </scenes>
 </document>

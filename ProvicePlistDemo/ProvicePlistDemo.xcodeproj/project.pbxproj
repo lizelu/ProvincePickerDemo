@@ -16,6 +16,7 @@
 		F4540A111CF57DC000F190C0 /* province.plist in Resources */ = {isa = PBXBuildFile; fileRef = F4540A0B1CF57DC000F190C0 /* province.plist */; };
 		F4540A121CF57DC000F190C0 /* ProvinceModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F4540A0E1CF57DC000F190C0 /* ProvinceModel.m */; };
 		F4540A131CF57DC000F190C0 /* ProvincePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = F4540A101CF57DC000F190C0 /* ProvincePickerView.m */; };
+		F45471211CF7F622003DC049 /* province_search.plist in Resources */ = {isa = PBXBuildFile; fileRef = F45471201CF7F622003DC049 /* province_search.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		F4540A0E1CF57DC000F190C0 /* ProvinceModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProvinceModel.m; sourceTree = "<group>"; };
 		F4540A0F1CF57DC000F190C0 /* ProvincePickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProvincePickerView.h; sourceTree = "<group>"; };
 		F4540A101CF57DC000F190C0 /* ProvincePickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProvincePickerView.m; sourceTree = "<group>"; };
+		F45471201CF7F622003DC049 /* province_search.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = province_search.plist; path = ProvicePlistDemo/province_search.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +52,7 @@
 		F45409D61CF431BA00F190C0 = {
 			isa = PBXGroup;
 			children = (
+				F45471201CF7F622003DC049 /* province_search.plist */,
 				F45409E11CF431BA00F190C0 /* ProvicePlistDemo */,
 				F45409E01CF431BA00F190C0 /* Products */,
 			);
@@ -168,6 +171,7 @@
 				F45409F21CF431BA00F190C0 /* LaunchScreen.storyboard in Resources */,
 				F45409EF1CF431BA00F190C0 /* Assets.xcassets in Resources */,
 				F4540A111CF57DC000F190C0 /* province.plist in Resources */,
+				F45471211CF7F622003DC049 /* province_search.plist in Resources */,
 				F45409ED1CF431BA00F190C0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

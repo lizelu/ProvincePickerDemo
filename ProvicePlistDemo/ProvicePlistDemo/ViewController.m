@@ -99,6 +99,39 @@
     [dataTask resume];
     
 }
+- (IBAction)tapRequestSearchButton:(id)sender {
+    
+    NSString *hostString = @"http://127.0.0.1/read_excel_search.php";
+    
+    NSURL *plistURL = [[NSURL alloc] initWithString: hostString];
+    
+    NSURLSession *session = [NSURLSession sharedSession];
+    
+    NSURLSessionDataTask *dataTask =
+    [session dataTaskWithURL:plistURL
+           completionHandler:^(NSData * _Nullable data,
+                               NSURLResponse * _Nullable response,
+                               NSError * _Nullable error) {
+               
+               NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:data
+                                                                   options:NSJSONReadingAllowFragments error:nil];
+               
+               NSFileManager *fileManager = [NSFileManager defaultManager];
+               NSURL *documentPath = [fileManager URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask][0] ;
+               NSURL *filePath = [documentPath URLByAppendingPathComponent:@"province_search.plist"];
+    
+               [dic writeToURL:filePath atomically:YES];
+               NSLog(@"文件存储路径%@", filePath);
+               
+               //从沙盒中读取文件
+               NSMutableDictionary *provinceData = [[NSMutableDictionary alloc] initWithContentsOfURL:filePath];
+               NSLog(@"%@", provinceData);
+               
+           }];
+    
+    [dataTask resume];
+
+}
 
 - (IBAction)tapSelectButton:(id)sender {
     [self.provincePicker showPickerView];
